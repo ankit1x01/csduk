@@ -1,17 +1,21 @@
+import Link from 'next/link';
 import styles from './Hero.module.css';
 
 export default function Hero() {
     return (
         <section className={styles.section}>
-            <div className={styles.overlay}></div>
+            {/* Background Effects */}
+            <div className={styles.gridOverlay}></div>
+            <div className={styles.gradientOverlay}></div>
+
             <div className={styles.wrapper}>
                 <div className={`${styles.content} animate-fade-in`}>
                     <div className={styles.breadcrumb}>
-                        <a href="/">Home</a>
+                        <Link href="/">Home</Link>
                         <span>›</span>
-                        <a href="#about">About</a>
+                        <Link href="/about">About</Link>
                         <span>›</span>
-                        <span>What is CSDUK?</span>
+                        <span>Cyber Secured UK</span>
                     </div>
 
                     <h1 className={styles.title}>
@@ -19,7 +23,7 @@ export default function Hero() {
                     </h1>
 
                     <p className={styles.tagline}>
-                        Made Secure. Made Resilient. Made Smarter.
+                        Made Secure. Made Resilient. Made Stronger.
                     </p>
 
                     <p className={styles.subtitle}>
@@ -33,8 +37,8 @@ export default function Hero() {
                     </p>
 
                     <div className={styles.actions}>
-                        <a href="#contact" className="btn btn-primary">Request a Consultation</a>
-                        <a href="#services" className="btn btn-secondary">View Our Services</a>
+                        <Link href="/contact" className="btn btn-primary">Request a Consultation</Link>
+                        <Link href="/services" className="btn btn-secondary">View Our Services</Link>
                     </div>
 
                     <div className={styles.accentLine}>
@@ -43,6 +47,10 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+
+            {/* Animated Particles/Shapes */}
+            <div className={`${styles.floatingShape} ${styles.floatingShape1}`}></div>
+            <div className={`${styles.floatingShape} ${styles.floatingShape2}`}></div>
         </section>
     );
 }

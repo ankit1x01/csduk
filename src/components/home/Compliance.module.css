@@ -1,0 +1,135 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--deep-navy); /* #021125 */
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid overlay for tech feel */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.intro {
+  color: var(--text-light-muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.check {
+  color: var(--electric-blue); /* #00A3FF */
+  flex-shrink: 0;
+}
+
+/* Badges Grid */
+.badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.badgeBox {
+  background: rgba(255, 255, 255, 0.03); /* Glassmorphism base */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  cursor: default;
+}
+
+.badgeText {
+  color: var(--electric-blue);
+  font-weight: 800;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.glowLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--electric-blue);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 10px var(--electric-blue);
+}
+
+.badgeBox:hover {
+  background: rgba(0, 86, 210, 0.15); /* Blue tint on hover */
+  border-color: var(--electric-blue);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 11, 25, 0.5);
+}
+
+.badgeBox:hover .badgeText {
+  color: var(--white);
+  text-shadow: 0 0 15px var(--electric-blue);
+}
+
+.badgeBox:hover .glowLine {
+  transform: scaleX(1);
+}
+
+@media (max-width: 968px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

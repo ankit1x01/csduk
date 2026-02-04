@@ -1,70 +1,90 @@
+import { Linkedin, Twitter, Youtube } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
-                <div className={styles.brand}>
-                    <div className={styles.brandLogo}>
-                        <h3>CSDUK</h3>
+                <div className={styles.mainGrid}>
+                    {/* Brand Section */}
+                    <div className={styles.brand}>
+                        <Link href="/" className={styles.logoLink}>
+                            <Image
+                                src="/logo.png"
+                                alt="Cyber Secured UK"
+                                width={150}
+                                height={50}
+                                className={styles.logoImage}
+                            />
+                        </Link>
+                        <p className={styles.description}>
+                            A division of Cyber Secured India. Providing expert cyber security and digital forensics services across the United Kingdom.
+                        </p>
+                        <div className={styles.socials}>
+                            <a href="#" aria-label="LinkedIn" className={styles.socialIcon}><Linkedin size={20} /></a>
+                            <a href="#" aria-label="Twitter" className={styles.socialIcon}><Twitter size={20} /></a>
+                            <a href="#" aria-label="YouTube" className={styles.socialIcon}><Youtube size={20} /></a>
+                        </div>
                     </div>
-                    <p className={styles.brandDescription}>
-                        Cyber Security & Digital Forensics UK is a national initiative backed by industry leaders.
-                        We connect UK organisations to the <a href="#services">digital tools</a>, <a href="#services">leadership</a>,
-                        and skills they need to drive sustainable security growth.
-                    </p>
-                </div>
 
-                <div className={styles.top}>
+                    {/* Links Columns */}
                     <div className={styles.links}>
+                        {/* Col 1 */}
                         <div className={styles.col}>
-                            <h4>Key Links</h4>
+                            <h4 className={styles.colTitle}>Services</h4>
                             <ul>
-                                <li><a href="#services">Our Services</a></li>
-                                <li><a href="#internship">Internship Program</a></li>
-                                <li><a href="#about">Case Studies</a></li>
-                                <li><a href="#contact">Events</a></li>
-                                <li><a href="#contact">Resources</a></li>
+                                <li><Link href="/services">Cyber Security Consulting</Link></li>
+                                <li><Link href="/services">Digital Forensics</Link></li>
+                                <li><Link href="/services">Incident Response</Link></li>
+                                <li><Link href="/services">Training Programs</Link></li>
                             </ul>
                         </div>
+
+                        {/* Col 2 */}
                         <div className={styles.col}>
-                            <h4>About</h4>
+                            <h4 className={styles.colTitle}>Company</h4>
                             <ul>
-                                <li><a href="#about">What is CSDUK?</a></li>
-                                <li><a href="#about">Our Approach</a></li>
-                                <li><a href="#about">Governance</a></li>
-                                <li><a href="#about">FAQs</a></li>
-                                <li><a href="#contact">Careers</a></li>
+                                <li><Link href="/about">About Us</Link></li>
+                                <li><Link href="/about">Why Choose Us</Link></li>
+                                <li><Link href="/about">Our Team</Link></li>
+                                <li><Link href="/contact">Careers</Link></li>
                             </ul>
                         </div>
+
+                        {/* Col 3 */}
                         <div className={styles.col}>
-                            <h4>Services</h4>
+                            <h4 className={styles.colTitle}>Resources</h4>
                             <ul>
-                                <li><a href="#services">Security Consulting</a></li>
-                                <li><a href="#services">Digital Forensics</a></li>
-                                <li><a href="#services">Training Programs</a></li>
-                                <li><a href="#services">Compliance Audits</a></li>
+                                <li><span className={styles.disabledLink}>Blog (Coming Soon)</span></li>
+                                <li><Link href="/about">Case Studies</Link></li>
+                                <li><Link href="/contact">FAQ</Link></li>
+                                <li><Link href="/contact">Contact</Link></li>
                             </ul>
                         </div>
+
+                        {/* Col 4 */}
                         <div className={styles.col}>
-                            <h4>Connect</h4>
+                            <h4 className={styles.colTitle}>Legal</h4>
                             <ul>
-                                <li><a href="#">LinkedIn</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">YouTube</a></li>
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#contact">Contact Us</a></li>
+                                <li><Link href="/privacy">Privacy Policy</Link></li>
+                                <li><Link href="/terms">Terms of Service</Link></li>
+                                <li><Link href="/cookies">Cookie Policy</Link></li>
+                                <li><Link href="/accessibility">Accessibility</Link></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div className={styles.bottom}>
-                    <p>&copy; {new Date().getFullYear()} Cyber Security & Digital Forensics UK</p>
+                <div className={styles.bottomBar}>
+                    <p>&copy; {new Date().getFullYear()} Cyber Secured UK. Part of the Cyber Secured India Group.</p>
                     <div className={styles.bottomLinks}>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Cookie Policy</a>
-                        <a href="#">Accessibility Policy</a>
+                        <Link href="/privacy">Privacy</Link>
+                        <span className={styles.separator}>|</span>
+                        <Link href="/terms">Terms</Link>
+                        <span className={styles.separator}>|</span>
+                        <Link href="/accessibility">Accessibility</Link>
                     </div>
                 </div>
             </div>

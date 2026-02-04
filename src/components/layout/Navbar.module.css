@@ -3,7 +3,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  background: var(--black);
+  background: var(--deep-navy);
 }
 
 .container {
@@ -31,44 +31,45 @@
 .topRight {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .search {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   color: var(--white);
   font-weight: 700;
   cursor: pointer;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   transition: color 0.2s ease;
 }
 
 .search:hover {
-  color: var(--yellow);
+  color: var(--primary-blue);
 }
 
 .searchIcon {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   opacity: 0.8;
 }
 
 .divider {
   width: 1px;
-  height: 16px;
+  height: 14px;
   background: rgba(255, 255, 255, 0.2);
 }
 
-.auth {
+.auth,
+.support {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   color: var(--text-light-muted);
-  font-size: 0.75rem;
 }
 
-.signIn {
+.signIn,
+.supportLink {
   color: var(--white);
   font-weight: 700;
   text-decoration: none;
@@ -76,45 +77,44 @@
   letter-spacing: 0.5px;
 }
 
-.signIn:hover {
-  color: var(--yellow);
+.signIn:hover,
+.supportLink:hover {
+  color: var(--primary-blue);
 }
 
 /* Main Nav Styles */
 .nav {
-  padding: 1.1rem 0;
-  background: var(--black);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 0; /* Reduced padding slightly to accommodate logo */
+  background: var(--deep-navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.logo {
-  font-size: 1.6rem;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0px;
-  color: var(--yellow);
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  transition: opacity 0.2s ease;
+.logoLink {
+  display: flex;
+  align-items: center;
+  /* Ensure it doesn't shrink */
+  flex-shrink: 0;
 }
 
-.logo:hover {
-  opacity: 0.85;
+.logoImage {
+  object-fit: contain;
+  /* Optional filter if the logo needs to be white-washed or adjusted,
+     but assume the provided logo is already suitable for dark bg */
 }
 
 .links {
   display: flex;
-  gap: 2.25rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
 .link {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   color: var(--white);
   text-transform: uppercase;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   position: relative;
@@ -128,12 +128,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--yellow);
+  background: var(--primary-blue);
   transition: width 0.3s ease;
 }
 
 .link:hover {
-  color: var(--yellow);
+  color: var(--primary-blue);
 }
 
 .link:hover::after {
@@ -141,16 +141,16 @@
 }
 
 .ctaButton {
-  background: var(--yellow);
-  color: var(--black);
-  padding: 0.9rem 1.85rem;
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 0.9rem 2rem;
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.6px;
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.75rem;
   transition: all 0.3s ease;
   font-family: "Montserrat", sans-serif;
   border-radius: 0;
@@ -185,9 +185,9 @@
 }
 
 .ctaButton:hover {
-  background: var(--yellow-dark);
+  background: var(--secondary-blue);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--yellow-glow);
+  box-shadow: 0 8px 25px var(--blue-glow);
 }
 
 .ctaButton:hover::after {
@@ -197,19 +197,5 @@
 @media (max-width: 968px) {
   .links {
     display: none;
-  }
-
-  .logo {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .auth span:first-child {
-    display: none;
-  }
-
-  .topRight {
-    gap: 1rem;
   }
 }

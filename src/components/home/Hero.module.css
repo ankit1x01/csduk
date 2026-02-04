@@ -3,12 +3,12 @@
   min-height: 92vh;
   display: flex;
   align-items: center;
-  background: var(--black);
+  background: var(--deep-navy);
   padding: 8rem 0 6rem;
   overflow: hidden;
 }
 
-/* Animated Background Grid */
+/* Base Background Image */
 .section::before {
   content: "";
   position: absolute;
@@ -17,27 +17,27 @@
   right: 0;
   bottom: 0;
   background: url("/hero-bg.jpg") center/cover no-repeat;
-  opacity: 0.35;
+  opacity: 0.2;
   z-index: 0;
 }
 
-/* Grid Pattern Overlay */
-.section::after {
-  content: "";
+/* Tech Grid Pattern Overlay */
+.gridOverlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    linear-gradient(90deg, rgba(255, 210, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(255, 210, 0, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background-image:
+    linear-gradient(rgba(0, 163, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 163, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
   z-index: 1;
   pointer-events: none;
 }
 
-.overlay {
+/* Gradient Overlay for Depth */
+.gradientOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,15 +45,14 @@
   bottom: 0;
   background:
     radial-gradient(
-      ellipse at 30% 50%,
-      rgba(11, 11, 11, 0.7) 0%,
-      rgba(11, 11, 11, 0.95) 70%
+      circle at 70% 30%,
+      rgba(0, 86, 210, 0.15) 0%,
+      transparent 60%
     ),
     linear-gradient(
-      180deg,
-      rgba(11, 11, 11, 0.9) 0%,
-      rgba(11, 11, 11, 0.8) 50%,
-      rgba(11, 11, 11, 0.95) 100%
+      to right,
+      rgba(2, 17, 37, 0.95) 0%,
+      rgba(2, 17, 37, 0.7) 100%
     );
   z-index: 2;
 }
@@ -68,74 +67,76 @@
 }
 
 .content {
-  max-width: 720px;
+  max-width: 750px;
 }
 
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
   font-size: 0.85rem;
   color: var(--text-light-muted);
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .breadcrumb a {
   color: var(--text-light-muted);
   text-decoration: underline;
   text-underline-offset: 3px;
+  transition: color 0.2s;
 }
 
 .breadcrumb a:hover {
-  color: var(--yellow);
+  color: var(--electric-blue);
 }
 
 .breadcrumb span:last-child {
-  text-decoration: underline;
-  text-underline-offset: 3px;
   color: var(--white);
+  font-weight: 500;
 }
 
 .title {
-  font-size: clamp(2.5rem, 5vw, 3.25rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.1;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   font-weight: 800;
-  letter-spacing: -0.5px;
   color: var(--white);
   font-style: italic;
+  letter-spacing: -1px;
   animation: fadeIn 0.8s ease-out 0.1s forwards;
   opacity: 0;
 }
 
 .tagline {
-  color: var(--yellow);
-  font-size: 1.2rem;
-  margin-bottom: 1.75rem;
+  color: var(--electric-blue);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
   font-style: italic;
   font-weight: 600;
   letter-spacing: 0.5px;
   animation: fadeIn 0.8s ease-out 0.2s forwards;
   opacity: 0;
-  text-shadow: 0 0 30px var(--yellow-glow);
+  text-shadow: 0 0 20px rgba(0, 163, 255, 0.4);
 }
 
 .subtitle {
-  font-size: 1.15rem;
-  color: var(--text-light);
+  font-size: 1.25rem;
+  color: var(--white);
   margin-bottom: 1rem;
-  line-height: 1.75;
+  line-height: 1.6;
   font-weight: 500;
   animation: fadeIn 0.8s ease-out 0.3s forwards;
   opacity: 0;
+  max-width: 90%;
 }
 
 .supportingText {
   font-size: 1rem;
   color: var(--text-light-muted);
   margin-bottom: 3rem;
-  line-height: 1.8;
+  line-height: 1.7;
+  max-width: 85%;
   animation: fadeIn 0.8s ease-out 0.4s forwards;
   opacity: 0;
 }
@@ -153,18 +154,18 @@
 .dot {
   width: 12px;
   height: 12px;
-  background: var(--yellow);
+  background: var(--electric-blue);
   border-radius: 50%;
-  box-shadow:
-    0 0 20px var(--yellow-glow),
-    0 0 40px var(--yellow-glow);
+  box-shadow: 0 0 15px var(--electric-blue);
   animation: pulse 2s ease-in-out infinite;
+  margin-left: -5px; /* Visual alignment fix */
 }
 
 .line {
   width: 2px;
   height: 100px;
-  background: linear-gradient(to bottom, var(--yellow), transparent);
+  background: linear-gradient(to bottom, var(--electric-blue), transparent);
+  margin-left: 0;
 }
 
 .actions {
@@ -178,56 +179,86 @@
 /* Floating Elements */
 .floatingShape {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   opacity: 0.1;
   pointer-events: none;
+  border-color: var(--electric-blue);
 }
 
 .floatingShape1 {
-  top: 20%;
-  right: 10%;
+  top: 15%;
+  right: 5%;
   width: 300px;
   height: 300px;
-  border: 2px solid var(--yellow);
+  border: 1px solid var(--electric-blue);
   border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 .floatingShape2 {
   bottom: 20%;
-  right: 20%;
-  width: 150px;
-  height: 150px;
-  background: var(--yellow);
-  opacity: 0.05;
-  animation: float 8s ease-in-out infinite reverse;
+  right: 25%;
+  width: 10px;
+  height: 10px;
+  background: var(--electric-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 40px 10px var(--electric-blue);
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 @media (max-width: 768px) {
   .section {
-    min-height: auto;
-    padding: 5rem 0 4rem;
+    padding: 6rem 0 4rem;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .actions {
     flex-direction: column;
+    width: 100%;
   }
 
   .actions .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .accentLine {
-    align-items: center;
-    margin-top: 3rem;
   }
 }

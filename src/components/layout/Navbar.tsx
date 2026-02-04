@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 
@@ -14,8 +15,12 @@ export default function Navbar() {
                         </div>
                         <div className={styles.divider}></div>
                         <div className={styles.auth}>
-                            <span>Already Registered?</span>
+                            <span>Already a client?</span>
                             <Link href="/login" className={styles.signIn}>SIGN IN</Link>
+                        </div>
+                        <div className={styles.divider}></div>
+                        <div className={styles.support}>
+                            <a href="mailto:nikhil@cybersecuredindia.com" className={styles.supportLink}>Support</a>
                         </div>
                     </div>
                 </div>
@@ -24,16 +29,22 @@ export default function Navbar() {
             {/* Main Navigation Bar */}
             <nav className={styles.nav}>
                 <div className={styles.container}>
-                    <Link href="/" className={styles.logo}>
-                        CSDUK
+                    <Link href="/" className={styles.logoLink}>
+                        <Image
+                            src="/logo.png"
+                            alt="Cyber Secured UK"
+                            width={180}
+                            height={60}
+                            className={styles.logoImage}
+                            priority
+                        />
                     </Link>
                     <div className={styles.links}>
-                        <Link href="#services" className={styles.link}>Adoption</Link>
-                        <Link href="#innovation" className={styles.link}>Innovation</Link>
-                        <Link href="#support" className={styles.link}>Support</Link>
-                        <Link href="#about" className={styles.link}>About</Link>
-                        <Link href="#insights" className={styles.link}>Insights</Link>
-                        <Link href="#contact" className={styles.ctaButton}>Start Your Journey</Link>
+                        <Link href="/" className={styles.link}>Home</Link>
+                        <Link href="/services" className={styles.link}>Services</Link>
+                        <Link href="/internship" className={styles.link}>Internship</Link>
+                        <Link href="/about" className={styles.link}>About</Link>
+                        <Link href="/contact" className={styles.ctaButton}>Get Started</Link>
                     </div>
                 </div>
             </nav>

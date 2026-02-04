@@ -1,80 +1,66 @@
+import { ArrowRight, Check } from 'lucide-react';
+import Link from 'next/link';
 import styles from './Internship.module.css';
 
 export default function Internship() {
     return (
-        <section id="internship" className={styles.section}>
-            <div className={styles.container}>
+        <section className={styles.section}>
+            <div className="container">
                 <div className={styles.wrapper}>
+                    {/* Left Column: Content */}
                     <div className={styles.content}>
-                        <h2 className={styles.title}>Join the CSDUK Internship Program</h2>
-                        <p className={styles.subtitle}>
-                            Bridge the gap between theoretical knowledge and practical skills with our
-                            structured 3-month program.
+                        <span className={styles.label}>INTERNSHIP PROGRAM</span>
+                        <h2 className={styles.heading}>Launch Your Cyber Security Career</h2>
+
+                        <p className={styles.description}>
+                            Join our industry-leading internship program, derived from Cyber Secured India's
+                            proven excellence. Gain hands-on experience with real-world projects, expert
+                            mentorship, and career-ready skills.
                         </p>
 
-                        <div className={styles.card}>
-                            <div className={styles.details}>
-                                <div className={styles.detailItem}>
-                                    <h4>Duration</h4>
-                                    <p>3 Months</p>
-                                </div>
-                                <div className={styles.detailItem}>
-                                    <h4>Format</h4>
-                                    <p>Hands-on</p>
-                                </div>
-                                <div className={styles.detailItem}>
-                                    <h4>Who Can Apply</h4>
-                                    <p>Students & Professionals</p>
-                                </div>
+                        <div className={styles.highlights}>
+                            <div className={styles.listCol}>
+                                <h4 className={styles.listTitle}>Training Focus:</h4>
+                                <ul className={styles.list}>
+                                    <li><Check size={18} className={styles.checkIcon} /> Ethical Hacking & Penetration Testing</li>
+                                    <li><Check size={18} className={styles.checkIcon} /> Digital Forensics Investigation</li>
+                                    <li><Check size={18} className={styles.checkIcon} /> Cyber Crime Analysis</li>
+                                    <li><Check size={18} className={styles.checkIcon} /> Network Security</li>
+                                </ul>
                             </div>
 
-                            <p className={styles.description}>
-                                Work alongside industry professionals on real-world projects.
-                                Gain practical experience in ethical hacking, digital forensics,
-                                malware analysis, and OSINT investigations.
-                            </p>
-
-                            <div className={styles.grid}>
-                                <div className={styles.list}>
-                                    <h4>Key Highlights</h4>
-                                    <ul>
-                                        <li>Hands-on Labs (Ethical Hacking, Forensics)</li>
-                                        <li>Live Simulated Investigations</li>
-                                        <li>Industry Mentorship & Networking</li>
-                                        <li>Valid Certification</li>
-                                    </ul>
-                                </div>
-                                <div className={styles.list}>
-                                    <h4>Focus Areas</h4>
-                                    <ul>
-                                        <li>Ethical Hacking (VAPT)</li>
-                                        <li>Digital Forensics</li>
-                                        <li>Malware Analysis</li>
-                                        <li>OSINT Investigations</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className={styles.cta}>
-                                <a href="#contact" className={styles.ctaButton}>Apply Now</a>
+                            <div className={styles.listCol}>
+                                <h4 className={styles.listTitle}>What You Get:</h4>
+                                <ul className={styles.list}>
+                                    <li><Check size={18} className={styles.checkIcon} /> Live project experience</li>
+                                    <li><Check size={18} className={styles.checkIcon} /> Industry certification prep</li>
+                                    <li><Check size={18} className={styles.checkIcon} /> Expert mentorship</li>
+                                    <li><Check size={18} className={styles.checkIcon} /> Career placement support</li>
+                                </ul>
                             </div>
                         </div>
+
+                        <Link href="/internship" className={styles.ctaButton}>
+                            Explore Internship Program <ArrowRight size={20} />
+                        </Link>
                     </div>
 
-                    <div className={styles.imageCards}>
+                    {/* Right Column: Image Cards */}
+                    <div className={styles.visuals}>
                         <div className={styles.imageCard}>
-                            <img src="https://picsum.photos/800/600?random=1" alt="Partner" />
-                            <div className={styles.imageCardOverlay}>
-                                <h4>Our Partners</h4>
+                            <img src="https://picsum.photos/600/400?random=1" alt="Student Success Stories" />
+                            <div className={styles.cardOverlay}>
+                                <h3>Student Success Stories</h3>
+                                <div className={styles.cardArrow}>→</div>
                             </div>
-                            <div className={styles.imageCardArrow}>→</div>
                         </div>
+
                         <div className={styles.imageCard}>
-                            <img src="https://picsum.photos/800/600?random=2" alt="Success Story" />
-                            <div className={styles.imageCardOverlay}>
-                                <h4>Success Stories</h4>
+                            <img src="https://picsum.photos/600/400?random=2" alt="Training Facilities" />
+                            <div className={styles.cardOverlay}>
+                                <h3>Training Facilities</h3>
+                                <div className={styles.cardArrow}>→</div>
                             </div>
-                            <div className={styles.imageCardArrow}>→</div>
                         </div>
                     </div>
                 </div>

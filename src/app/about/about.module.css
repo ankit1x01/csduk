@@ -1,0 +1,388 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  padding: 8rem 0 4rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/hero-bg.jpg") center/cover no-repeat;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(11, 11, 11, 0.9) 0%,
+    rgba(11, 11, 11, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-light-muted);
+}
+
+.breadcrumb a {
+  color: var(--text-light-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.breadcrumb a:hover {
+  color: var(--yellow);
+}
+
+.breadcrumb span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--white);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--yellow);
+  font-style: italic;
+}
+
+/* Sections */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.aboutSection {
+  background: var(--white);
+  padding: 7rem 0;
+}
+
+.aboutWrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.aboutContent {
+  max-width: 580px;
+}
+
+.aboutText {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+.aboutText p {
+  margin-bottom: 1.75rem;
+}
+
+.aboutText strong {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.aboutCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutImageCard {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.aboutImageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.aboutImageCard:hover img {
+  transform: scale(1.08);
+}
+
+.aboutImageCardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  );
+}
+
+.aboutImageCardContent h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.aboutImageCardArrow {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 45px;
+  height: 45px;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--yellow-glow);
+}
+
+.aboutImageCard:hover .aboutImageCardArrow {
+  transform: translateX(5px);
+}
+
+.whyChooseSection {
+  background: var(--off-white);
+  padding: 7rem 0;
+}
+
+.whyChooseSection .sectionTitle {
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.whyChooseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.whyChooseCard {
+  padding: 2rem 2.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.whyChooseCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.whyChooseCard:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+  transform: translateY(-5px);
+}
+
+.whyChooseCard:hover::before {
+  transform: scaleX(1);
+}
+
+.whyChooseIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.whyChooseText {
+  margin: 0;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.complianceSection {
+  background: var(--black);
+  padding: 7rem 0;
+  color: var(--white);
+}
+
+.complianceSection .sectionTitle {
+  color: var(--white);
+}
+
+.complianceWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.complianceText {
+  color: var(--text-light-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.complianceList {
+  list-style: none;
+  padding: 0;
+}
+
+.complianceList li {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: var(--text-light);
+}
+
+.complianceCheck {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.complianceLogos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.complianceBadge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--yellow);
+  letter-spacing: 1.5px;
+  transition: all 0.4s ease;
+}
+
+.complianceBadge:hover {
+  background: rgba(255, 210, 0, 0.1);
+  border-color: var(--yellow);
+  transform: translateY(-5px);
+}
+
+.industriesSection {
+  background: var(--white);
+  padding: 7rem 0;
+}
+
+.industriesSection .sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.industryCard {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem;
+  background: var(--off-white);
+  border: 1px solid var(--gray-200);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.industryCard:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  transform: translateX(8px);
+}
+
+.industryIcon {
+  font-size: 2rem;
+}
+
+.industryName {
+  font-weight: 700;
+  color: var(--black);
+  font-size: 1rem;
+}
+
+@media (max-width: 968px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .aboutWrapper,
+  .complianceWrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
