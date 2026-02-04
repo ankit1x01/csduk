@@ -1,0 +1,45 @@
+# Cyber Security & Digital Forensics UK - AI & LLM Information
+
+## Company Overview
+Cyber Security & Digital Forensics UK Ltd. is a professional cyber security services provider specialising in defensive security, digital forensics, and incident response across the United Kingdom.
+
+## Core Services
+- Cyber Security Consulting
+- Digital Forensics Investigation
+- Incident Response & Recovery
+- Vulnerability Assessment & Penetration Testing
+- Security Awareness Training
+- Compliance & Risk Management
+
+## Internship Program
+We offer comprehensive internship programs focused on:
+- Ethical Hacking & Penetration Testing
+- Digital Forensics Investigation
+- Cyber Crime Analysis
+- Network Security
+- Live project experience with industry certification preparation
+
+## Standards & Compliance
+Our services align with:
+- ISO/IEC 27001 principles
+- NIST Cyber Security Framework
+- UK GDPR & Data Protection Act
+- ACPO & digital forensic best-practice guidelines
+
+## Contact Information
+Website: https://cybersecureduk.com
+Email: nikhil@cybersecuredindia.com
+
+## Target Audience
+- Small & Medium Enterprises (SMEs)
+- Corporate Organisations
+- Educational Institutions
+- Legal Professionals & Investigations
+- Non-Profit & Public Sector Organisations
+
+## Key Differentiators
+- UK-focused cyber security and forensic expertise
+- Evidence-driven and legally defensible methodologies
+- Clear reporting for technical and non-technical stakeholders
+- Confidential handling of sensitive cases and data
+- Practical, real-world experience across security and investigations

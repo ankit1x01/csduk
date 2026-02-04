@@ -35,7 +35,7 @@ export default function About() {
                     <div className={styles.images}>
                         {/* Card 1 */}
                         <div className={styles.imageCard}>
-                            <img src="https://picsum.photos/600/400?random=10" alt="Our Team" />
+                            <img src="/team-meeting.png" alt="Our Team" />
                             <div className={styles.imageOverlay}>
                                 <h3>Our Team</h3>
                                 <div className={styles.arrowBox}>→</div>
@@ -44,7 +44,7 @@ export default function About() {
 
                         {/* Card 2 */}
                         <div className={styles.imageCard}>
-                            <img src="https://picsum.photos/600/400?random=11" alt="UK Operations" />
+                            <img src="/uk-operations.png" alt="UK Operations" />
                             <div className={styles.imageOverlay}>
                                 <h3>UK Operations</h3>
                                 <div className={styles.arrowBox}>→</div>
