@@ -9,11 +9,6 @@ export default function Navbar() {
             <div className={styles.topBar}>
                 <div className={styles.container}>
                     <div className={styles.topRight}>
-                        <div className={styles.search}>
-                            <span>SEARCH</span>
-                            <span className={styles.searchIcon}>🔍</span>
-                        </div>
-                        <div className={styles.divider}></div>
                         <div className={styles.support}>
                             <a href="mailto:nikhil@cybersecuredindia.com" className={styles.supportLink}>Support</a>
                         </div>
