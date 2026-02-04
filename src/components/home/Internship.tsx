@@ -48,7 +48,7 @@ export default function Internship() {
                     {/* Right Column: Image Cards */}
                     <div className={styles.visuals}>
                         <div className={styles.imageCard}>
-                            <img src="https://picsum.photos/600/400?random=1" alt="Student Success Stories" />
+                            <img src="/student-success.png" alt="Student Success Stories" />
                             <div className={styles.cardOverlay}>
                                 <h3>Student Success Stories</h3>
                                 <div className={styles.cardArrow}>→</div>
@@ -56,7 +56,7 @@ export default function Internship() {
                         </div>
 
                         <div className={styles.imageCard}>
-                            <img src="https://picsum.photos/600/400?random=2" alt="Training Facilities" />
+                            <img src="/training-facility.png" alt="Training Facilities" />
                             <div className={styles.cardOverlay}>
                                 <h3>Training Facilities</h3>
                                 <div className={styles.cardArrow}>→</div>
