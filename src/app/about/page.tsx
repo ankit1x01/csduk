@@ -52,16 +52,16 @@ export default function AboutPage() {
 
                         <div className={styles.aboutCards}>
                             <div className={styles.aboutImageCard}>
-                                <img src="https://picsum.photos/800/600?random=7" alt="Our Team" />
+                                <img src="/team-meeting.png" alt="Our Team" />
                                 <div className={styles.aboutImageCardContent}>
                                     <h4>Our Team</h4>
                                 </div>
                                 <div className={styles.aboutImageCardArrow}>→</div>
                             </div>
                             <div className={styles.aboutImageCard}>
-                                <img src="https://picsum.photos/800/600?random=8" alt="Our Mission" />
+                                <img src="/uk-operations.png" alt="UK Operations" />
                                 <div className={styles.aboutImageCardContent}>
-                                    <h4>Our Mission</h4>
+                                    <h4>UK Operations</h4>
                                 </div>
                                 <div className={styles.aboutImageCardArrow}>→</div>
                             </div>

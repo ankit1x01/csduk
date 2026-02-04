@@ -26,10 +26,10 @@ export default function Navbar() {
                 <div className={styles.container}>
                     <Link href="/" className={styles.logoLink}>
                         <Image
-                            src="/logo.png"
-                            alt="Cyber Secured UK"
-                            width={180}
-                            height={60}
+                            src="/logo-symbol.png"
+                            alt="CSDF UK Symbol"
+                            width={50}
+                            height={50}
                             className={styles.logoImage}
                             priority
                         />
