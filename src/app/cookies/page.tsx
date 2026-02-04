@@ -100,8 +100,8 @@ export default function CookiesPage() {
                         <h2>8. Contact Us</h2>
                         <p>If you have questions about our use of cookies:</p>
                         <address>
-                            <strong>Cyber Secured UK</strong><br />
-                            Email: contact@cybersecureduk.com<br />
+                            <strong>Cyber Security and Digital Forensics UK Ltd.</strong><br />
+                            Email: nikhil@csdfuk.com<br />
                         </address>
                     </section>
 

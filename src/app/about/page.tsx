@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
+import Link from 'next/link';
 import styles from './about.module.css';
 
 export default function AboutPage() {
@@ -13,13 +14,13 @@ export default function AboutPage() {
                 <div className="container">
                     <div className={styles.heroContent}>
                         <div className={styles.breadcrumb}>
-                            <a href="/">Home</a>
+                            <Link href="/">Home</Link>
                             <span>›</span>
                             <span>About Us</span>
                         </div>
-                        <h1 className={styles.heroTitle}>About CSDUK</h1>
+                        <h1 className={styles.heroTitle}>About CSDF UK</h1>
                         <p className={styles.heroSubtitle}>
-                            Leading the UK's cyber security and digital forensics initiatives
+                            Leading the UK&apos;s cyber security and digital forensics initiatives
                         </p>
                     </div>
                 </div>
@@ -34,7 +35,7 @@ export default function AboutPage() {
 
                             <div className={styles.aboutText}>
                                 <p>
-                                    <strong>Cyber Security & Digital Forensics UK</strong> is a professional cyber security
+                                    <strong>Cyber Security and Digital Forensics UK Ltd.</strong> is a professional cyber security
                                     services provider specialising in defensive security, digital forensics, and incident response.
                                 </p>
                                 <p>

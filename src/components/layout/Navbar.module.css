@@ -98,6 +98,7 @@
 
 .logoImage {
   object-fit: contain;
+  border-radius: 12px;
   /* Optional filter if the logo needs to be white-washed or adjusted,
      but assume the provided logo is already suitable for dark bg */
 }

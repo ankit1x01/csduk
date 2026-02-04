@@ -34,7 +34,7 @@ export default function ContactPage() {
                                     <div className={styles.iconBox}><Mail size={24} /></div>
                                     <div>
                                         <h4 className={styles.itemLabel}>Email</h4>
-                                        <a href="mailto:contact@cybersecureduk.com" className={styles.itemLink}>contact@cybersecureduk.com</a>
+                                        <a href="mailto:nikhil@csdfuk.com" className={styles.itemLink}>nikhil@csdfuk.com</a>
                                     </div>
                                 </div>
 
@@ -42,7 +42,7 @@ export default function ContactPage() {
                                     <div className={styles.iconBox}><Phone size={24} /></div>
                                     <div>
                                         <h4 className={styles.itemLabel}>Phone</h4>
-                                        <a href="tel:+440000000000" className={styles.itemLink}>+44 (0) XXX XXXX XXXX</a>
+                                        <a href="tel:+447946630285" className={styles.itemLink}>+44 7946 630285</a>
                                     </div>
                                 </div>
 
@@ -50,7 +50,7 @@ export default function ContactPage() {
                                     <div className={styles.iconBox}><MapPin size={24} /></div>
                                     <div>
                                         <h4 className={styles.itemLabel}>Location</h4>
-                                        <p className={styles.itemText}>United Kingdom</p>
+                                        <p className={styles.itemText}>71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ.</p>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                             <div className={styles.emergencyBox}>
                                 <h4>Urgent Security Incident?</h4>
                                 <p>For immediate assistance with a breach or cyber attack:</p>
-                                <a href="mailto:emergency@cybersecureduk.com">emergency@cybersecureduk.com</a>
+                                <a href="mailto:nikhil@csdfuk.com">nikhil@csdfuk.com</a>
                             </div>
                         </div>
 

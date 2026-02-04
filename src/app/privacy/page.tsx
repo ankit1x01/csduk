@@ -13,8 +13,8 @@ export default function PrivacyPage() {
 
                     <section>
                         <h2>1. Introduction</h2>
-                        <p>Cyber Secured UK ("we", "our", "us") is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, store, and protect your information in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
-                        <p>Cyber Secured UK is the data controller responsible for your personal data. If you have any questions about this policy, please contact us at contact@cybersecureduk.com.</p>
+                        <p>Cyber Security and Digital Forensics UK Ltd. ("we", "our", "us") is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, store, and protect your information in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+                        <p>Cyber Security and Digital Forensics UK Ltd. is the data controller responsible for your personal data. If you have any questions about this policy, please contact us at nikhil@csdfuk.com.</p>
                     </section>
 
                     <section>
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
                             <li><strong>Right to Object:</strong> Object to processing based on legitimate interests</li>
                             <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for marketing or cookies</li>
                         </ul>
-                        <p>To exercise these rights, contact us at contact@cybersecureduk.com</p>
+                        <p>To exercise these rights, contact us at nikhil@csdfuk.com</p>
                     </section>
 
                     <section>
@@ -117,9 +117,9 @@ export default function PrivacyPage() {
                         <h2>13. Contact Us</h2>
                         <p>If you have questions about this Privacy Policy or wish to exercise your data protection rights:</p>
                         <address>
-                            <strong>Cyber Secured UK</strong><br />
-                            Email: contact@cybersecureduk.com<br />
-                            Location: United Kingdom
+                            <strong>Cyber Security and Digital Forensics UK Ltd.</strong><br />
+                            Email: nikhil@csdfuk.com<br />
+                            Location: 71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ.
                         </address>
                     </section>
 

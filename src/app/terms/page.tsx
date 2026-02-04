@@ -19,9 +19,9 @@ export default function TermsPage() {
                     <section>
                         <h2>2. About Cyber Secured UK</h2>
                         <p>
-                            <strong>Company Name:</strong> Cyber Secured UK<br />
+                            <strong>Company Name:</strong> Cyber Security and Digital Forensics UK Ltd.<br />
                             <strong>Jurisdiction:</strong> United Kingdom<br />
-                            <strong>Email:</strong> contact@cybersecureduk.com<br />
+                            <strong>Email:</strong> nikhil@csdfuk.com<br />
                         </p>
                     </section>
 
@@ -127,8 +127,8 @@ export default function TermsPage() {
                         <h2>16. Contact Information</h2>
                         <p>If you have any questions about these terms:</p>
                         <address>
-                            <strong>Cyber Secured UK</strong><br />
-                            Email: contact@cybersecureduk.com<br />
+                            <strong>Cyber Security and Digital Forensics UK Ltd.</strong><br />
+                            Email: nikhil@csdfuk.com<br />
                         </address>
                     </section>
                 </div>

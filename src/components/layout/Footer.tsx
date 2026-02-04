@@ -20,7 +20,7 @@ export default function Footer() {
                             />
                         </Link>
                         <p className={styles.description}>
-                            A division of Cyber Secured India. Providing expert cyber security and digital forensics services across the United Kingdom.
+                            Cyber Security and Digital Forensics UK Ltd. Providing expert cyber security and digital forensics services across the United Kingdom.
                         </p>
                         <div className={styles.socials}>
                             <a href="#" aria-label="LinkedIn" className={styles.socialIcon}><Linkedin size={20} /></a>
@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.bottomBar}>
-                    <p>&copy; {new Date().getFullYear()} Cyber Secured UK. Part of the Cyber Secured India Group.</p>
+                    <p>&copy; {new Date().getFullYear()} Cyber Security and Digital Forensics UK Ltd. All rights reserved.</p>
                     <div className={styles.bottomLinks}>
                         <Link href="/privacy">Privacy</Link>
                         <span className={styles.separator}>|</span>

@@ -14,11 +14,6 @@ export default function Navbar() {
                             <span className={styles.searchIcon}>🔍</span>
                         </div>
                         <div className={styles.divider}></div>
-                        <div className={styles.auth}>
-                            <span>Already a client?</span>
-                            <Link href="/login" className={styles.signIn}>SIGN IN</Link>
-                        </div>
-                        <div className={styles.divider}></div>
                         <div className={styles.support}>
                             <a href="mailto:nikhil@cybersecuredindia.com" className={styles.supportLink}>Support</a>
                         </div>
