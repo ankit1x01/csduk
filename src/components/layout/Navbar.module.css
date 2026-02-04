@@ -1,0 +1,215 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--black);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Top Bar Styles */
+.topBar {
+  background: #000000;
+  padding: 0.6rem 0;
+  font-size: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topBar .container {
+  justify-content: flex-end;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.6px;
+  transition: color 0.2s ease;
+}
+
+.search:hover {
+  color: var(--yellow);
+}
+
+.searchIcon {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-light-muted);
+  font-size: 0.75rem;
+}
+
+.signIn {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.signIn:hover {
+  color: var(--yellow);
+}
+
+/* Main Nav Styles */
+.nav {
+  padding: 1.1rem 0;
+  background: var(--black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0px;
+  color: var(--yellow);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.85;
+}
+
+.links {
+  display: flex;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--yellow);
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: var(--yellow);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.ctaButton {
+  background: var(--yellow);
+  color: var(--black);
+  padding: 0.9rem 1.85rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.4s ease;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton::after {
+  content: "→";
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: var(--yellow-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--yellow-glow);
+}
+
+.ctaButton:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 968px) {
+  .links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth span:first-child {
+    display: none;
+  }
+
+  .topRight {
+    gap: 1rem;
+  }
+}
